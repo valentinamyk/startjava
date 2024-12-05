@@ -83,8 +83,8 @@ public class VariableNamesTheme {
         System.out.println("Дата начала " + startDate);
 
         // Окончание диапазона
-        int endRange = 0;
-        System.out.println("Окончание диапазона " + endRange);
+        int rangeEnd = 0;
+        System.out.println("Окончание диапазона " + rangeEnd);
 
         // Полное имя работника месяца
         String employeMonthFullName = "Иванов Иван";
@@ -123,14 +123,14 @@ public class VariableNamesTheme {
         System.out.println("Сотни равны? " + hasHundredsEquals);
 
         // Компьютер включен?
-        boolean isPcEmbed = true;
-        System.out.println("Компьютер включен? " + isPcEmbed);
+        boolean isPcOn = true;
+        System.out.println("Компьютер включен? " + isPcOn);
 
         // Есть равные цифры?
         int x = 3;
         int y = 5;
-        boolean hasDigitsEqual = x == y;
-        System.out.println("Есть равные цифры? " + hasDigitsEqual);
+        boolean hasEqualDigits = x == y;
+        System.out.println("Есть равные цифры? " + hasEqualDigits);
 
         // Создано?
         boolean isCreated = false;
@@ -169,16 +169,16 @@ public class VariableNamesTheme {
         System.out.println("Производитель ОЗУ: " + ramManufactur);
 
         // Ёмкость жесткого диска
-        String cdCapaciti = "256 ГБ";
-        System.out.println("Ёмкость CD: " + cdCapaciti);
+        String hdCapaciti = "256 ГБ";
+        System.out.println("Ёмкость CD: " + hdCapaciti);
 
         // Протокол передачи гипертекста
         String http = "http://ya.ru";
         System.out.println("http: " + http);
 
         // Сокращенный uniform resource locator
-        String clipUrl = "https://vk.cc/clFVUP";
-        System.out.println("Сокращенный URL: " + clipUrl);
+        String shortUrl = "https://vk.cc/clFVUP";
+        System.out.println("Сокращенный URL: " + shortUrl);
 
         // Новый идентификатор клиента
         String newId = "V-cN-3545";
