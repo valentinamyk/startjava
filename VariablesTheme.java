@@ -45,23 +45,24 @@ public class VariablesTheme {
         int feedPrice = 2147483647;
         System.out.println("\nint первоначальное значение: " + feedPrice + 
                 "\nint значение после инкремента на единицу: " + ++feedPrice + 
-                "\nint значение после декремента на единицу: " + (--feedPrice - 1));
+                "\nint значение после декремента на единицу: " + --feedPrice);
         byte cowNumbers = 127;
         System.out.println("\nbyte первоначальное значение: " + cowNumbers + 
                 "\nbyte значение после инкремента на единицу: " + ++cowNumbers + 
-                "\nbyte значение после декремента на единицу: " + (--cowNumbers - 1));
+                "\nbyte значение после декремента на единицу: " + --cowNumbers);
         long profitTotal = 9223372036854775807L;
         System.out.println("\nlong первоначальное значение: " + profitTotal + 
                 "\nlong значение после инкремента на единицу: " + ++profitTotal + 
-                "\nlong значение после декремента на единицу: " + (--profitTotal - 1));
+                "\nlong значение после декремента на единицу: " + --profitTotal);
         short ducksPrice = 32767;
         System.out.println("\nshort первоначальное значение: " + ducksPrice + 
                 "\nshort значение после инкремента на единицу: " + ++ducksPrice + 
-                "\nshort значение после декремента на единицу: " + (--ducksPrice - 1));
-        char coffePrice = '9';
-        System.out.println("\nchar первоначальное значение: " + coffePrice + 
-                "\nchar значение после инкремента на единицу: " + ++coffePrice + 
-                "\nchar значение после декремента на единицу: " + (--coffePrice - 1));
+                "\nshort значение после декремента на единицу: " + --ducksPrice);
+        int value = 127;
+        char purchaseCode = (char) value;
+        System.out.println("\nchar первоначальное значение: " + purchaseCode + 
+                "\nchar значение после инкремента на единицу: " + ++purchaseCode + 
+                "\nchar значение после декремента на единицу: " + --purchaseCode);
 
         // 5. Перестановка значений переменных
         System.out.println("\n5. Перестановка значений переменных");
@@ -80,7 +81,7 @@ public class VariablesTheme {
         System.out.println("Значения переменных после перестановки значений с помощью" +
                 " арифметических операций: " + "int x = " + x + ", " + "int y = " + y);
         x ^= y;
-        y = x ^ y;
+        y ^= x;
         x ^= y;
         System.out.println("Значения переменных после перестановки значений с помощью побитовой" +
                 " операции: " + "int x = " + x + ", " + "int y = " + y);
@@ -88,15 +89,15 @@ public class VariablesTheme {
         // 6. Вывод символов и их кодов
         System.out.println("\n6. Вывод символов и их кодов");
         char dollar = '$';
-        System.out.println((int) '$' + " " + dollar);
+        System.out.println((int) dollar + " " + dollar);
         char asterisk = '*';
-        System.out.println((int) '*' + " " + asterisk);
+        System.out.println((int) asterisk + " " + asterisk);
         char atSign = '@';
-        System.out.println((int) '@' + " " + atSign);
+        System.out.println((int) atSign + " " + atSign);
         char verticalBar = '|';
-        System.out.println((int) '|' + " " + verticalBar);
+        System.out.println((int) verticalBar + " " + verticalBar);
         char tilde = '~';
-        System.out.println((int) '~' + " " + tilde);
+        System.out.println((int) tilde + " " + tilde);
 
         // 7. Вывод в консоль ASCII-арт Дюка
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка");
