@@ -59,10 +59,10 @@ public class VariablesTheme {
                 "\nshort значение после инкремента на единицу: " + ++ducksPrice + 
                 "\nshort значение после декремента на единицу: " + --ducksPrice);
         int value = 127;
-        char purchaseCode = (char) value;
-        System.out.println("\nchar первоначальное значение: " + purchaseCode + 
-                "\nchar значение после инкремента на единицу: " + ++purchaseCode + 
-                "\nchar значение после декремента на единицу: " + --purchaseCode);
+        char purchaseCode = 65535;
+        System.out.println("\nchar первоначальное значение: " + (int) purchaseCode + 
+                "\nchar значение после инкремента на единицу: " + (int) ++purchaseCode + 
+                "\nchar значение после декремента на единицу: " + (int) --purchaseCode);
 
         // 5. Перестановка значений переменных
         System.out.println("\n5. Перестановка значений переменных");
