@@ -58,7 +58,6 @@ public class VariablesTheme {
         System.out.println("\nshort первоначальное значение: " + ducksPrice + 
                 "\nshort значение после инкремента на единицу: " + ++ducksPrice + 
                 "\nshort значение после декремента на единицу: " + --ducksPrice);
-        int value = 127;
         char purchaseCode = 65535;
         System.out.println("\nchar первоначальное значение: " + (int) purchaseCode + 
                 "\nchar значение после инкремента на единицу: " + (int) ++purchaseCode + 
