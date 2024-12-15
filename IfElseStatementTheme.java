@@ -41,8 +41,7 @@ public class IfElseStatementTheme {
             System.out.println(coffePrice + " < " + menuAir);
         } else if (coffePrice > menuAir) {
             System.out.println(coffePrice + " > " + menuAir);
-        }
-        if (coffePrice == menuAir) {
+        } else {
             System.out.println("Числа равны.");
         }
 
@@ -51,15 +50,17 @@ public class IfElseStatementTheme {
         int number = 7;
         if (number == 0) {
             System.out.println("Число является нулём");
-        } else if (number > 0) {
-            System.out.print(number + " является положительным");
-        } else if (number < 0) {
-            System.out.print(number + " является отрицательным");
-        }
-        if (number % 2 == 0) {
-            System.out.print(" и четным");
-        } else if (number % 2 != 0) {
-            System.out.println(" и нечётным");
+        } else {
+            if (number > 0) {
+                System.out.print(number + " является положительным");
+            } else {
+                System.out.print(number + " является отрицательным");
+            }
+            if (number % 2 == 0) {
+                System.out.print(" и четным");
+            } else {
+                System.out.println(" и нечётным");
+            }
         }
 
         // 4. Поиск одинаковых цифр в числах
@@ -75,18 +76,18 @@ public class IfElseStatementTheme {
         if ((doorOnes != houseOnes) && (doorTens != houseTens) && 
                 (doorHundreds != houseHundreds)) {
             System.out.println("В числах " + doorNumber + " и " + houseNumber + 
-                        " равных разрядов нет");
+                    " равных разрядов нет");
         } else {
             System.out.println("Исходные числа: " + doorNumber + " и " + houseNumber);
-        }
-        if (doorOnes == houseOnes) {
-            System.out.println("Разряд единиц в числах совпадает: " + doorOnes);
-        }
-        if (doorTens == houseTens) {
-            System.out.println("Разряд десятков в числах совпадает: " + doorTens);
-        }
-        if (doorHundreds == houseHundreds) {
-            System.out.println("Разряд сотен в числах совпадает: " + doorHundreds);
+            if (doorOnes == houseOnes) {
+                System.out.println("Разряд единиц в числах совпадает: " + doorOnes);
+            }
+            if (doorTens == houseTens) {
+                System.out.println("Разряд десятков в числах совпадает: " + doorTens);
+            }
+            if (doorHundreds == houseHundreds) {
+                System.out.println("Разряд сотен в числах совпадает: " + doorHundreds);
+            }
         }
 
         // 5. Определение символа по его коду
@@ -94,7 +95,7 @@ public class IfElseStatementTheme {
         char laptopModel = '\u0057';
         if (Character.isUpperCase(laptopModel)) {
             System.out.println("'" + laptopModel + "'" + " большая буква");
-        } else if ((Character.isLetter(laptopModel)) && (Character.isLowerCase(laptopModel))) {
+        } else if (Character.isLowerCase(laptopModel)) {
             System.out.println("'" + laptopModel + "'" + " маленькая буква");
         } else if (Character.isDigit(laptopModel)) {
             System.out.println("'" + laptopModel + "'" + " это цифра");
@@ -105,8 +106,8 @@ public class IfElseStatementTheme {
         // 6.Подсчет начисленных банком %
         System.out.println("\n6.Подсчет начисленных банком %\n");
         double depositSum = 321123.59d;
-        double interestRate;
-        double accrual;
+        double interestRate = 0.05;
+        double accrual = depositSum * interestRate;
         if (depositSum < 100000) {
             interestRate = 0.05;
         } else if (depositSum >= 100000 && depositSum <= 300000) {
@@ -114,18 +115,15 @@ public class IfElseStatementTheme {
         } else {
             interestRate = 0.10;
         }
-        accrual = depositSum * interestRate;
         double totalSum = depositSum + accrual;
         System.out.printf("Сумма вклада: %.2f руб.\n", depositSum); 
-        System.out.printf("Сумма начисления %%: %.2f руб.\n", accrual); 
+        System.out.printf("Сумма начисления: %.2f руб.\n", accrual); 
         System.out.printf("Итоговая сумма с %%: %.2f руб.\n", totalSum);
 
         // 7.Определение оценки по предметам
         System.out.println("\n7.Определение оценки по предметам\n");
         int historyPercent = 59;
-        int programmingPercent = 92;
         int historyGrade = 0;
-        int programmingGrade = 0;
         if (historyPercent > 91) {
             historyGrade = 5;
         } else if (historyPercent > 73) {
@@ -135,6 +133,8 @@ public class IfElseStatementTheme {
         } else if (historyPercent <= 60) {
             historyGrade = 2;
         }
+        int programmingPercent = 92;
+        int programmingGrade = 0;
         if (programmingPercent > 91) {
             programmingGrade = 5;
         } else if (programmingPercent > 73) {
@@ -156,7 +156,7 @@ public class IfElseStatementTheme {
         double perMonthSales = 13025.233d;
         double perMonthRent = 5123.018d;
         double productionCost = 9001.729d;
-        double annualProfit = perMonthSales * 12 - (perMonthRent + productionCost) * 12;
+        double annualProfit = (perMonthSales - (perMonthRent + productionCost)) * 12;
         if (annualProfit > 0) {
             System.out.printf("Прибыль за год: +%.2f руб.\n", annualProfit);
         } else {
